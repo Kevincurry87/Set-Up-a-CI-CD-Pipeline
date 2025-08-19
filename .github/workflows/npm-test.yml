@@ -9,6 +9,8 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+      - name: Start server
+        run: npm start &
       - name: Run tests
         run: npm test
       - name: Deploy to Firebase
